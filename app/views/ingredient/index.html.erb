@@ -1,6 +1,17 @@
-<h1>Hello World</h1>
+<h1 class="border border-grey-500 text-center">
+  Ingredients
+</h1>
 
-<p>This is a little page all about ingredients.</p>
+<p>
+The ingredients below can be combined into Recipies and Meals.
+</p>
 
-<p>This is another paragraph ... does it appear?</p>
-<p class="px-8 bg-blue-300">This is another paragraph ... does it appear?</p>
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li>
+      <%= ingrdient.name %>
+    </li>
+  <% end %>
+</ul>
+
+
