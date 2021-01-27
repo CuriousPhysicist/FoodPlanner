@@ -39,12 +39,77 @@
 
   <div class="p-2">
     <p>A table view of the Macro and Micro nutrients accumulated from the list of ingredients. This will dynamically update as the list on the page is updated.</p>
-    <div class="flex flex-col p-2 border border-gray-400 rounded-lg">
-      <table class="border border-red-500">
-        <th>Ingredient</th>
-        <tr>
-          <td></td>
-        </tr>
+    <div class="flex flex-col items-center p-2 border border-gray-400 rounded-lg space-y-2">
+      <table class="w-full border border-gray-700">
+        <tbody>
+          <th class="border border-current" colspan="3">
+            Macro-nutrients
+          </th>
+          <tr>
+            <th class="border border-current">Totals</th>
+            <th class="border border-current">Units</th>
+            <th class="border border-current">RDA (%)</th>
+          </tr>
+          <tr colspan="3">
+            <th class="px-2 text-left">Protein</th>
+          </tr>
+          <tr>
+            <td class="px-2 border border-current">25</th>
+            <td class="px-2 border border-current">(g)</th>
+            <td class="px-2 border border-current">12</th>
+          </tr>
+          <tr colspan="2">
+            <th class="px-2 text-left">Fats</th>
+          </tr>
+          <tr>
+            <td class="px-2 border border-current">20</th>
+            <td class="px-2 border border-current">(g)</th>
+            <td class="px-2 border border-current">15</th>
+          </tr>
+          <tr colspan="3">
+            <th class="px-2 text-left">Carbohydrate</th>
+          </tr>
+          <tr>
+            <td class="px-2 border border-current">35</th>
+            <td class="px-2 border border-current">(g)</th>
+            <td class="px-2 border border-current">20</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="w-full border border-gray-700">
+        <tbody>
+          <th class="border border-current" colspan="3">
+            Micro-nutrients
+          </th>
+          <tr>
+            <th class="border border-current">Totals</th>
+            <th class="border border-current">Units</th>
+            <th class="border border-current">RDA (%)</th>
+          </tr>
+          <tr colspan="3">
+            <th class="px-2 text-left" colspan="3">Minerals</th>
+          </tr>
+          <tr class="border border-current" colspan="3">
+            <td class="px-2 text-left">Sodium</th>
+          </tr>
+          <tr>
+            <td class="px-2 border border-current">25</th>
+            <td class="px-2 border border-current">(mg)</th>
+            <td class="px-2 border border-current">12</th>
+          </tr>
+          <tr colspan="3">
+            <th class="px-2 text-left">Vitamins</th>
+          </tr>
+          <tr class="border border-current" colspan="3">
+            <td class="px-2 text-left">Vitamin A</th>
+          </tr>
+          <tr>
+            <td class="px-2 border border-current">40</th>
+            <td class="px-2 border border-current">(mg)</th>
+            <td class="px-2 border border-current">50</th>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
