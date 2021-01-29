@@ -1,119 +1,133 @@
-<div class="h-full max-w-lg mx-auto content-araond lg:content-around lg:max-w-3xl grid grid-cols-1 lg:grid-cols-6">
-  <h1 class="px-2 py-4 text-xl text-center lg:col-span-6">Daily Food Planner</h1>
+<div class="content-around max-w-lg mx-auto lg:h-full lg:max-w-3xl grid grid-cols-1 lg:grid-cols-6">
+  <h1 class="px-2 py-4 text-xl text-center lg:col-span-6">
+    Daily Food Planner
+  </h1>
 
-  <div class="p-2 lg:col-span-2">
-    <div class="p-2 border border-gray-400 rounded-lg lg:h-full">
-      <div class="flex justify-end">
-        <button class="p-2 bg-green-200 rounded">
-          Add Ingredient
-        </button>
+  <div class="p-2 my-2 border border-gray-400 rounded-lg lg:my-0 lg:col-span-2">
+    <div class="flex justify-end p-2">
+      <button class="p-2 bg-green-200 rounded">
+        Add Ingredient
+      </button>
+    </div>
+
+    <ul class"p-2 flex flex-col">
+      <li class="p-4 my-2 border border-gray-300 rounded">
+        <div class="flex items-center justify-between">
+          Apple
+          <button class="p-2 bg-red-200 rounded">
+            Remove
+          </button>
+        </div>
+      </li>
+      <li class="p-4 my-2 border border-gray-300 rounded">
+        <div class="flex items-center justify-between">
+          Banana
+          <button class="p-2 bg-red-200 rounded">
+            Remove
+          </button>
+        </div>
+      </li>
+      <li class="p-4 my-2 border border-gray-300 rounded">
+        <div class="flex items-center justify-between">
+          Orange
+          <button class="p-2 bg-red-200 rounded">
+            Remove
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="my-2 border border-gray-400 rounded-lg lg:my-0 lg:col-span-4">
+    <div class="flex flex-col items-center w-full p-2 lg:items-start lg:flex-row lg:place-content-around lg:space-y-0 space-y-2">
+      <div class="min-w-full lg:min-w-0">
+        <table class="w-full h-full border border-gray-700">
+          <tbody>
+            <th class="border border-current" colspan="3">
+              Macro-nutrients
+            </th>
+            <tr>
+              <th class="border border-current">Totals</th>
+              <th class="border border-current">Units</th>
+              <th class="border border-current">RDA (%)</th>
+            </tr>
+            <tr colspan="3">
+              <th class="px-2 text-left">Protein</th>
+            </tr>
+            <tr>
+              <td class="px-2 border border-current">25</th>
+              <td class="px-2 border border-current">(g)</th>
+              <td class="px-2 border border-current">12</th>
+            </tr>
+            <tr colspan="2">
+              <th class="px-2 text-left">Fats</th>
+            </tr>
+            <tr>
+              <td class="px-2 border border-current">20</th>
+              <td class="px-2 border border-current">(g)</th>
+              <td class="px-2 border border-current">15</th>
+            </tr>
+            <tr colspan="3">
+              <th class="px-2 text-left">Carbohydrate</th>
+            </tr>
+            <tr colspan="3" class="border border-current">
+              <td class="px-6 text-left">Starch</th>
+            </tr>
+            <tr>
+              <td class="px-2 border border-current">35</th>
+              <td class="px-2 border border-current">(g)</th>
+              <td class="px-2 border border-current">20</th>
+            </tr>
+            <tr colspan="3" class="border border-current">
+              <td class="px-6 text-left">Sugar</th>
+            </tr>
+              <td class="px-2 border border-current">35</th>
+              <td class="px-2 border border-current">(g)</th>
+              <td class="px-2 border border-current">20</th>
+          </tbody>
+        </table>
       </div>
-      <ul class"flex flex-col">
-        <li class="p-4 my-2 border border-gray-300 rounded">
-          <div class="flex items-center justify-between">
-              Apple
-            <button class="p-2 bg-red-200 rounded">
-              Remove
-            </button>
-          </div>
-        </li>
-        <li class="p-4 my-2 border border-gray-300 rounded">
-          <div class="flex items-center justify-between">
-            Banana
-            <button class="p-2 bg-red-200 rounded">
-              Remove
-            </button>
-          </div>
-        </li>
-        <li class="p-4 my-2 border border-gray-300 rounded">
-          <div class="flex items-center justify-between">
-            Orange
-            <button class="p-2 bg-red-200 rounded">
-              Remove
-            </button>
-          </div>
-        </li>
-      </ul>
+
+      <div class="min-w-full lg:min-w-0">
+        <table class="h-full min-w-full border border-gray-700">
+          <tbody>
+            <th class="border border-current" colspan="3">
+              Micro-nutrients
+            </th>
+            <tr>
+              <th class="border border-current">Totals</th>
+              <th class="border border-current">Units</th>
+              <th class="border border-current">RDA (%)</th>
+            </tr>
+            <tr colspan="3">
+              <th class="px-2 text-left" colspan="3">Minerals</th>
+            </tr>
+            <tr class="border border-current" colspan="3">
+              <td class="px-2 text-left">Sodium</th>
+            </tr>
+            <tr>
+              <td class="px-2 border border-current">25</th>
+              <td class="px-2 border border-current">(mg)</th>
+              <td class="px-2 border border-current">12</th>
+            </tr>
+            <tr colspan="3">
+              <th class="px-2 text-left">Vitamins</th>
+            </tr>
+            <tr class="border border-current" colspan="3">
+              <td class="px-2 text-left">Vitamin A</th>
+            </tr>
+            <tr>
+              <td class="px-2 border border-current">40</th>
+              <td class="px-2 border border-current">(mg)</th>
+              <td class="px-2 border border-current">50</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-  <div class="p-2 lg:col-span-4">
-    <div class="flex flex-col items-center p-2 border border-gray-400 rounded-lg space-y-2">
-      <table class="w-full border border-gray-700">
-        <tbody>
-          <th class="border border-current" colspan="3">
-            Macro-nutrients
-          </th>
-          <tr>
-            <th class="border border-current">Totals</th>
-            <th class="border border-current">Units</th>
-            <th class="border border-current">RDA (%)</th>
-          </tr>
-          <tr colspan="3">
-            <th class="px-2 text-left">Protein</th>
-          </tr>
-          <tr>
-            <td class="px-2 border border-current">25</th>
-            <td class="px-2 border border-current">(g)</th>
-            <td class="px-2 border border-current">12</th>
-          </tr>
-          <tr colspan="2">
-            <th class="px-2 text-left">Fats</th>
-          </tr>
-          <tr>
-            <td class="px-2 border border-current">20</th>
-            <td class="px-2 border border-current">(g)</th>
-            <td class="px-2 border border-current">15</th>
-          </tr>
-          <tr colspan="3">
-            <th class="px-2 text-left">Carbohydrate</th>
-          </tr>
-          <tr>
-            <td class="px-2 border border-current">35</th>
-            <td class="px-2 border border-current">(g)</th>
-            <td class="px-2 border border-current">20</th>
-          </tr>
-        </tbody>
-      </table>
-
-      <table class="w-full border border-gray-700">
-        <tbody>
-          <th class="border border-current" colspan="3">
-            Micro-nutrients
-          </th>
-          <tr>
-            <th class="border border-current">Totals</th>
-            <th class="border border-current">Units</th>
-            <th class="border border-current">RDA (%)</th>
-          </tr>
-          <tr colspan="3">
-            <th class="px-2 text-left" colspan="3">Minerals</th>
-          </tr>
-          <tr class="border border-current" colspan="3">
-            <td class="px-2 text-left">Sodium</th>
-          </tr>
-          <tr>
-            <td class="px-2 border border-current">25</th>
-            <td class="px-2 border border-current">(mg)</th>
-            <td class="px-2 border border-current">12</th>
-          </tr>
-          <tr colspan="3">
-            <th class="px-2 text-left">Vitamins</th>
-          </tr>
-          <tr class="border border-current" colspan="3">
-            <td class="px-2 text-left">Vitamin A</th>
-          </tr>
-          <tr>
-            <td class="px-2 border border-current">40</th>
-            <td class="px-2 border border-current">(mg)</th>
-            <td class="px-2 border border-current">50</th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="p-2 lg:col-span-6">
+  <div class="p-2 m-2 lg:col-span-6">
     <p>A summary of differences (over and under) for nutrient categories based on RDA data. This section will also have the ability to provide suggestions from the libbrary of ingredients to help balance the intake of nutrients.</p>
   </div>
 </div>
