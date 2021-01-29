@@ -7,10 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # sample ingredients
-%w[
-  Apple
-  Banana
-  Orange
-].each do |name|
-  Ingredient.create(name: name)
+10.times do
+  Ingredient.create(
+    name: Faker::Food.ingredient,
+    description: Faker::Lorem.paragraph
+  )
 end

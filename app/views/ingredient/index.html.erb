@@ -9,7 +9,7 @@
     The ingredients below can be combined into Recipies and Meals.
   </p>
 
-  <div class="flex flex-row">
+  <div class="flex flex-row flex-wrap max-w-full">
     <% @ingredients.each do |ingredient| %>
       <div class="p-4 border border-gray-300 rounded">
         <%= ingredient.name %>
