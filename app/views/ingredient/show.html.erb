@@ -22,23 +22,20 @@
         <tr>
           <th class="border border-current">Totals</th>
           <th class="border border-current">Units</th>
-          <th class="border border-current">RDA (%)</th>
         </tr>
         <tr colspan="3">
           <th class="px-2 text-left">Protein</th>
         </tr>
         <tr>
           <td class="px-2 border border-current">25</th>
-          <td class="px-2 border border-current">(g)</th>
-          <td class="px-2 border border-current">12</th>
+          <td class="px-2 text-center border border-current">(g)</th>
         </tr>
         <tr colspan="2">
           <th class="px-2 text-left">Fats</th>
         </tr>
         <tr>
           <td class="px-2 border border-current">20</th>
-          <td class="px-2 border border-current">(g)</th>
-          <td class="px-2 border border-current">15</th>
+          <td class="px-2 text-center border border-current">(g)</th>
         </tr>
         <tr colspan="3">
           <th class="px-2 text-left">Carbohydrate</th>
@@ -48,15 +45,21 @@
         </tr>
         <tr>
           <td class="px-2 border border-current">35</th>
-          <td class="px-2 border border-current">(g)</th>
-          <td class="px-2 border border-current">20</th>
+          <td class="px-2 text-center border border-current">(g)</th>
         </tr>
         <tr colspan="3" class="border border-current">
           <td class="px-6 text-left">Sugar</th>
         </tr>
-        <td class="px-2 border border-current">35</th>
-        <td class="px-2 border border-current">(g)</th>
-        <td class="px-2 border border-current">20</th>
+        <tr>
+          <td class="px-2 border border-current">35</th>
+          <td class="px-2 text-center border border-current">(g)</th>
+        </tr>
+        <% @ingredient.macro_nutrients.each do |macro| %>
+        <tr>
+          <td class="px-2 border border-current"><%= macro.group %></th>
+          <td class="px-2 text-center border border-current">(g)</th>
+        </tr>
+        <% end %>
       </tbody>
     </table>
 

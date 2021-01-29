@@ -11,5 +11,9 @@
   Ingredient.create(
     name: Faker::Food.ingredient,
     description: Faker::Lorem.paragraph
-  )
+  ).tap do |ing|
+    ing.macro_nutrients.create(
+      group: "Protein"
+    )
+  end
 end

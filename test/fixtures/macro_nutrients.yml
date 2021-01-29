@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group: MyString
+  specific_quantity: 1.5
+  ingredient: one
+
+two:
+  group: MyString
+  specific_quantity: 1.5
+  ingredient: two

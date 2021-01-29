@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_144523) do
+ActiveRecord::Schema.define(version: 2021_01_29_114355) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
@@ -19,4 +19,15 @@ ActiveRecord::Schema.define(version: 2021_01_21_144523) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "macro_nutrients", force: :cascade do |t|
+    t.string "group"
+    t.float "specific_quantity"
+    t.integer "ingredient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.index ["ingredient_id"], name: "index_macro_nutrients_on_ingredient_id"
+  end
+
+  add_foreign_key "macro_nutrients", "ingredients"
 end

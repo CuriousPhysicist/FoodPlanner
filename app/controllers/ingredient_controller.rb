@@ -4,6 +4,6 @@ class IngredientController < ApplicationController
   end
 
   def show
-    @ingredient = Ingredient.find(params[:id])
+    @ingredient = Ingredient.where(id: params[:id]).includes(:macro_nutrients).first
   end
 end
