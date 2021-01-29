@@ -1,21 +1,20 @@
-<div class="container flex flex-col items-center mx-auto">
+<div class="container flex flex-col h-full">
   <div class="py-8">
-    <h1 class="text-4xl font-bold">
+    <h1 class="text-4xl font-bold text-center">
       Ingredients
     </h1>
   </div>
 
-  <div class="py-4">
-    <p class="">
-      The ingredients below can be combined into Recipies and Meals.
-    </p>
+  <p class="p-4">
+    The ingredients below can be combined into Recipies and Meals.
+  </p>
+
+  <div class="flex flex-row">
+    <% @ingredients.each do |ingredient| %>
+      <div class="p-4 border border-gray-300 rounded">
+        <%= ingredient.name %>
+        <%= ingredient.description %>
+      </div>
+    <% end %>
   </div>
 </div>
-
-<ul class="flex flex-col items-center">
-  <% @ingredients.each do |ingredient| %>
-    <li class="py-1">
-      <%= ingredient.name %>
-    </li>
-  <% end %>
-</ul>
