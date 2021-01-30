@@ -54,11 +54,23 @@
           <td class="px-2 border border-current">35</th>
           <td class="px-2 text-center border border-current">(g)</th>
         </tr>
-        <% @ingredient.macro_nutrients.each do |macro| %>
-        <tr>
-          <td class="px-2 border border-current"><%= macro.group %></th>
-          <td class="px-2 text-center border border-current">(g)</th>
-        </tr>
+        <% @ingredient.macro_nutrients.each do |nutrient| %>
+          <tr>
+            <th>
+              <%= nutrient.group %>
+            </th>
+          </tr>
+          <%# nutrients.each do |nutrient| %>
+            <tr>
+              <td>
+                <%= nutrient.name %>
+              </td>
+            </tr>
+            <tr>
+              <td><%= nutrient.specific_quantity * @ingredient.quantity %></td>
+              <td><%= nutrient.unit %></td>
+            </tr>
+          <%# end %>
         <% end %>
       </tbody>
     </table>

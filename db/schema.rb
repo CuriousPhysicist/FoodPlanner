@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_114355) do
+ActiveRecord::Schema.define(version: 2021_01_29_121448) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "quantity"
   end
 
   create_table "macro_nutrients", force: :cascade do |t|
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_01_29_114355) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.string "unit"
     t.index ["ingredient_id"], name: "index_macro_nutrients_on_ingredient_id"
   end
 

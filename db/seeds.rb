@@ -10,10 +10,14 @@
 10.times do
   Ingredient.create(
     name: Faker::Food.ingredient,
-    description: Faker::Lorem.paragraph
-  ).tap do |ing|
-    ing.macro_nutrients.create(
-      group: "Protein"
-    )
+    description: Faker::Lorem.paragraph,
+    quantity: 10
+  ).tap do |ingredient|
+    %w[Protein Fat Carboydrate].each do |group|
+      ingredient.macro_nutrients.create(
+        group: group,
+        specific_quantity: 3.5
+      )
+    end
   end
 end
