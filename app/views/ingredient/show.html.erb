@@ -23,54 +23,27 @@
           <th class="border border-current">Totals</th>
           <th class="border border-current">Units</th>
         </tr>
-        <tr colspan="3">
-          <th class="px-2 text-left">Protein</th>
-        </tr>
-        <tr>
-          <td class="px-2 border border-current">25</th>
-          <td class="px-2 text-center border border-current">(g)</th>
-        </tr>
-        <tr colspan="2">
-          <th class="px-2 text-left">Fats</th>
-        </tr>
-        <tr>
-          <td class="px-2 border border-current">20</th>
-          <td class="px-2 text-center border border-current">(g)</th>
-        </tr>
-        <tr colspan="3">
-          <th class="px-2 text-left">Carbohydrate</th>
-        </tr>
-        <tr colspan="3" class="border border-current">
-          <td class="px-6 text-left">Starch</th>
-        </tr>
-        <tr>
-          <td class="px-2 border border-current">35</th>
-          <td class="px-2 text-center border border-current">(g)</th>
-        </tr>
-        <tr colspan="3" class="border border-current">
-          <td class="px-6 text-left">Sugar</th>
-        </tr>
-        <tr>
-          <td class="px-2 border border-current">35</th>
-          <td class="px-2 text-center border border-current">(g)</th>
-        </tr>
         <% @ingredient.macro_nutrients.each do |nutrient| %>
-          <tr>
-            <th>
+          <tr colspan="3">
+            <th class="px-2 text-left">
               <%= nutrient.group %>
             </th>
           </tr>
-          <%# nutrients.each do |nutrient| %>
-            <tr>
+          <% if nutrient.name.present? %>
+            <tr colspan="3" class="px-2 border border-current">
               <td>
                 <%= nutrient.name %>
               </td>
             </tr>
-            <tr>
-              <td><%= nutrient.specific_quantity * @ingredient.quantity %></td>
-              <td><%= nutrient.unit %></td>
-            </tr>
-          <%# end %>
+          <% end %>
+          <tr>
+            <td class="px-2 border border-current">
+              <%= nutrient.specific_quantity * @ingredient.quantity %>
+            </td>
+            <td  class="px-2 text-center border border-current">
+              <%= nutrient.unit %>
+            </td>
+          </tr>
         <% end %>
       </tbody>
     </table>

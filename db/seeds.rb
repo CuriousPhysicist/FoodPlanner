@@ -16,7 +16,8 @@
     %w[Protein Fat Carboydrate].each do |group|
       ingredient.macro_nutrients.create(
         group: group,
-        specific_quantity: 3.5
+        specific_quantity: 3.5,
+        unit: '(g)'
       )
     end
   end
