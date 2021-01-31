@@ -50,7 +50,7 @@
       </tbody>
     </table>
 
-    <table class="h-full min-w-full m-2 border border-gray-700 col-span-3">
+    <table class="min-w-full m-2 border border-gray-700 col-span-3">
       <tbody>
         <th class="border border-current" colspan="3">
           Micro-nutrients
@@ -58,30 +58,31 @@
         <tr>
           <th class="border border-current">Totals</th>
           <th class="border border-current">Units</th>
-          <th class="border border-current">RDA (%)</th>
         </tr>
-        <tr colspan="3">
-          <th class="px-2 text-left" colspan="3">Minerals</th>
-        </tr>
-        <tr class="border border-current" colspan="3">
-          <td class="px-2 text-left">Sodium</th>
-        </tr>
-        <tr>
-          <td class="px-2 border border-current">25</th>
-          <td class="px-2 border border-current">(mg)</th>
-          <td class="px-2 border border-current">12</th>
-        </tr>
-        <tr colspan="3">
-          <th class="px-2 text-left">Vitamins</th>
-        </tr>
-        <tr class="border border-current" colspan="3">
-          <td class="px-2 text-left">Vitamin A</th>
-        </tr>
-        <tr>
-          <td class="px-2 border border-current">40</th>
-          <td class="px-2 border border-current">(mg)</th>
-          <td class="px-2 border border-current">50</th>
-        </tr>
+        <% @ingredient.micro_nutrients.to_a.group_by(&:group).each do |group, nutrients|  %>
+          <tr colspan="3">
+            <th class="px-2 text-left">
+              <%= group %>
+            </th>
+          </tr>
+          <% nutrients.each do |nutrient| %>
+            <% if nutrient.name.present? %>
+              <tr colspan="3" class="px-2 border border-current">
+                <td class="px-4">
+                  <%= nutrient.name %>
+                </td>
+              </tr>
+            <% end %>
+            <tr>
+              <td class="px-2 border border-current">
+                <%= nutrient.specific_quantity * @ingredient.quantity %>
+              </td>
+              <td  class="px-2 text-center border border-current">
+                <%= nutrient.unit %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
       </tbody>
     </table>
   </div>
