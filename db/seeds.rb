@@ -13,9 +13,15 @@
     description: Faker::Lorem.paragraph,
     quantity: 10
   ).tap do |ingredient|
-    %w[Protein Fat Carboydrate].each do |group|
+    [
+      ["Protein", nil],
+      ["Fats", nil],
+      ["Carboydrate", "Starch"],
+      ["Carboydrate", "Sugar"]
+    ].each do |group, name|
       ingredient.macro_nutrients.create(
         group: group,
+        name: name,
         specific_quantity: 3.5,
         unit: '(g)'
       )
