@@ -1,5 +1,8 @@
 /* purgecss start ignore */
 @import "tailwindcss/base";
 /* purgecss end ignore */
+.highlight {
+  @apply border border-red-500
+}
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
